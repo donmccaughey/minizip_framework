@@ -1,18 +1,19 @@
-//
-//  minizip.h
-//  minizip
-//
-//  Created by Don McCaughey on 12/27/24.
-//
-
 #import <Foundation/Foundation.h>
 
-//! Project version number for minizip.
 FOUNDATION_EXPORT double minizipVersionNumber;
-
-//! Project version string for minizip.
 FOUNDATION_EXPORT const unsigned char minizipVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <minizip/PublicHeader.h>
-
-
+#import <minizip/mz.h>
+#import <minizip/mz_crypt.h>
+#import <minizip/mz_os.h>
+#import <minizip/mz_strm.h>
+#import <minizip/mz_strm_buf.h>
+#import <minizip/mz_strm_bzip.h>
+#import <minizip/mz_strm_libcomp.h>
+#import <minizip/mz_strm_mem.h>
+#import <minizip/mz_strm_os.h>
+#import <minizip/mz_strm_pkcrypt.h>
+#import <minizip/mz_strm_split.h>
+#import <minizip/mz_strm_wzaes.h>
+#import <minizip/mz_zip.h>
+#import <minizip/mz_zip_rw.h>
