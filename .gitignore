@@ -4,3 +4,4 @@ Debug
 DerivedData
 Release
 tmp
+**/xcuserdata

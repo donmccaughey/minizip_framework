@@ -40,7 +40,35 @@
 		D45846822D1F40C600E0D442 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D45846812D1F40C600E0D442 /* libbz2.tbd */; };
 		D45846842D1F430700E0D442 /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D45846832D1F42FF00E0D442 /* libcompression.tbd */; };
 		D45846882D1F440200E0D442 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45846872D1F440200E0D442 /* Security.framework */; };
+		D491E75A2D1F59C8007D0573 /* minizip.c in Sources */ = {isa = PBXBuildFile; fileRef = D45846302D1F3F2700E0D442 /* minizip.c */; };
+		D491E75C2D1F5A0D007D0573 /* minizip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42DD8EC2D1F3E68000038FE /* minizip.framework */; };
+		D491E7602D1F5B48007D0573 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D491E75F2D1F5B42007D0573 /* libbz2.tbd */; };
+		D491E7622D1F5B65007D0573 /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D491E7612D1F5B5F007D0573 /* libcompression.tbd */; };
+		D491E7642D1F5B71007D0573 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D491E7632D1F5B6C007D0573 /* libiconv.tbd */; };
+		D491E7662D1F5B7B007D0573 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D491E7652D1F5B7B007D0573 /* Security.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D491E7572D1F592E007D0573 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D42DD8E32D1F3E68000038FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D42DD8EB2D1F3E68000038FE;
+			remoteInfo = minizip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D491E74C2D1F5924007D0573 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D42DD8EC2D1F3E68000038FE /* minizip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = minizip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +201,11 @@
 		D458468A2D1F480C00E0D442 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D458468B2D1F481600E0D442 /* mz_os.h.diff */ = {isa = PBXFileReference; lastKnownFileType = text; path = mz_os.h.diff; sourceTree = "<group>"; };
 		D491E7492D1F572C007D0573 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D491E74E2D1F5924007D0573 /* mzip */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mzip; sourceTree = BUILT_PRODUCTS_DIR; };
+		D491E75F2D1F5B42007D0573 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		D491E7612D1F5B5F007D0573 /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
+		D491E7632D1F5B6C007D0573 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D491E7652D1F5B7B007D0573 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -208,6 +241,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D491E74B2D1F5924007D0573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D491E75C2D1F5A0D007D0573 /* minizip.framework in Frameworks */,
+				D491E7662D1F5B7B007D0573 /* Security.framework in Frameworks */,
+				D491E7602D1F5B48007D0573 /* libbz2.tbd in Frameworks */,
+				D491E7642D1F5B71007D0573 /* libiconv.tbd in Frameworks */,
+				D491E7622D1F5B65007D0573 /* libcompression.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -229,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				D42DD8EC2D1F3E68000038FE /* minizip.framework */,
+				D491E74E2D1F5924007D0573 /* mzip */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -426,6 +472,10 @@
 		D458467C2D1F407600E0D442 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D491E7652D1F5B7B007D0573 /* Security.framework */,
+				D491E7632D1F5B6C007D0573 /* libiconv.tbd */,
+				D491E7612D1F5B5F007D0573 /* libcompression.tbd */,
+				D491E75F2D1F5B42007D0573 /* libbz2.tbd */,
 				D45846872D1F440200E0D442 /* Security.framework */,
 				D45846852D1F431D00E0D442 /* libcommonCrypto.tbd */,
 				D45846832D1F42FF00E0D442 /* libcompression.tbd */,
@@ -494,6 +544,26 @@
 			productReference = D42DD8EC2D1F3E68000038FE /* minizip.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D491E74D2D1F5924007D0573 /* mzip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D491E7522D1F5924007D0573 /* Build configuration list for PBXNativeTarget "mzip" */;
+			buildPhases = (
+				D491E74A2D1F5924007D0573 /* Sources */,
+				D491E74B2D1F5924007D0573 /* Frameworks */,
+				D491E74C2D1F5924007D0573 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D491E7582D1F592E007D0573 /* PBXTargetDependency */,
+			);
+			name = mzip;
+			packageProductDependencies = (
+			);
+			productName = "minizip-cmd";
+			productReference = D491E74E2D1F5924007D0573 /* mzip */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -504,6 +574,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					D42DD8EB2D1F3E68000038FE = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					D491E74D2D1F5924007D0573 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -523,6 +596,7 @@
 			projectRoot = "";
 			targets = (
 				D42DD8EB2D1F3E68000038FE /* minizip */,
+				D491E74D2D1F5924007D0573 /* mzip */,
 			);
 		};
 /* End PBXProject section */
@@ -560,7 +634,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D491E74A2D1F5924007D0573 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D491E75A2D1F59C8007D0573 /* minizip.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D491E7582D1F592E007D0573 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D42DD8EB2D1F3E68000038FE /* minizip */;
+			targetProxy = D491E7572D1F592E007D0573 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D42DD8F32D1F3E68000038FE /* Debug */ = {
@@ -592,6 +682,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
+				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
@@ -639,6 +730,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
+				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
@@ -796,6 +888,38 @@
 			};
 			name = Release;
 		};
+		D491E7532D1F5924007D0573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K39VF43BJL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.donm.mzip;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D491E7542D1F5924007D0573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K39VF43BJL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.donm.mzip;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -813,6 +937,15 @@
 			buildConfigurations = (
 				D42DD8F32D1F3E68000038FE /* Debug */,
 				D42DD8F42D1F3E68000038FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D491E7522D1F5924007D0573 /* Build configuration list for PBXNativeTarget "mzip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D491E7532D1F5924007D0573 /* Debug */,
+				D491E7542D1F5924007D0573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
