@@ -80,7 +80,7 @@ with these preprocessor definitions:
 The [minizip/minizip.h][50] unbrella header includes necessary header
 files from the minizip-ng distribution.
 
-The [patch/mz_os.h.diff][51] patch file fixes an Apple `modules-verifier` error. 
+The [patches/mz_os.h.diff][51] patch file fixes an Apple `modules-verifier` error. 
 
 [50]: ./minizip/minizip.h
-[51]: ./patch/mz_os.h.diff
+[51]: ./patches/mz_os.h.diff
