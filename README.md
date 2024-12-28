@@ -7,19 +7,32 @@ An [Apple framework][1] bundle for the [minizip-ng][2] library.
 
 ## Background
 
-The minizip-ng library is a zip manipulation library written in C.  While it
-has a [CMake][10] build system that is capable of generating an Xcode project
-that produces a static library, it [does not easily compose][11] with other
-Xcode projects and workspaces, and it does not easily support building a
+The minizip-ng library is a zip file manipulation library written in C.  While
+it has a [CMake][10] build system that is capable of generating an Xcode
+project, the generated project [does not easily compose][11] with other Xcode
+projects and workspaces, and it does not easily support building a
 multiplatform library.
 
 This project contains the source distribution of minizip-ng 4.0.7 and adds a
-purpose-built Xcode framework project, an [umbrella header][12] and a patch to
-the minizip-ng sources.
+purpose-built Xcode framework project, the [`<minizip/minizip.h>`][12]
+[umbrella header][13] and [a patch to `mz_os.h`][14] that fixes an Apple
+[`modules-verifier` error][15]. 
 
 [10]: https://cmake.org
 [11]: https://gitlab.kitware.com/cmake/cmake/-/issues/24408
-[12]: https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPFrameworks/Tasks/IncludingFrameworks.html
+[12]: ./minizip/minizip.h
+[13]: https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPFrameworks/Tasks/IncludingFrameworks.html
+[14]: ./patches/mz_os.h.diff
+[15]: https://developer.apple.com/documentation/xcode/identifying-and-addressing-framework-module-issues
+
+The minizip framework is a static, multiplatform library containing a fat
+binary containing both arm64 and x86_64 architectures.  The Apple Developer
+site artices ["Creating a static framework"][20] and ["Creating a multiplatform
+binary framework bundle"][21] describe how to set up an Xcode project for this
+type of framework.
+
+[20]: https://developer.apple.com/documentation/xcode/creating-a-static-framework
+[21]: https://developer.apple.com/documentation/xcode/creating-a-static-framework
 
 ## License
 
@@ -32,7 +45,7 @@ The minizip framework is made available under the [zlib license][30].  See the
 ## Xcode Project Construction
 
 The Xcode framework project uses minizip-ng's CMake build system as a guide.
-The CMake command used to generate the static library project is:
+The CMake command used to generate the Xcode project is:
 
     cmake -G "Xcode" \
           -DCMAKE_SYSTEM_NAME=Darwin \
@@ -77,10 +90,9 @@ with these preprocessor definitions:
     HAVE_STDINT_H
     HAVE_WZAES
 
-The [minizip/minizip.h][50] unbrella header includes necessary header
-files from the minizip-ng distribution.
+linking against these frameworks and libraries:
 
-The [patches/mz_os.h.diff][51] patch file fixes an Apple `modules-verifier` error. 
-
-[50]: ./minizip/minizip.h
-[51]: ./patches/mz_os.h.diff
+    libbz2.tbd
+    libcompression.tbd
+    libiconv.tbd
+    Security.framework (Do Not Embed)
